@@ -2,19 +2,59 @@ class Point {
 	String id
 	double x,y;
     String color;
-    
-	//TODO add new variable
+    Point(String id,double x,double y,String color)
+    {
+        this.id = id;
+        this.x = x;
+        this.y = y;
+        this.color = color;
+    }
+    public String getID()
+    {
+        return id;
+    }
+    public double getX()
+    {
+        return x;
+    }
+    public double getY()
+    {
+        return y;
+    }
+    public String getColoro()
+    {
+        return color;
+    }
 
-	//TODO constructor
+    public void setID(String id) {
+        this.id = id;
+    }
 
-	//TODO setters and getters
+    public void setX(double x) {
+        this.x = x;
+    }
 
-	public void move (char xDirection, char yDirection) {
-		//TODO
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void move (char xDirection, char yDirection) {
+		if(xDirection=='L')
+		    x-=1;
+		else if(xDirection=='R')
+		    x+=1;
+		if(yDirection=='U')
+		    y+=1;
+		else if(yDirection=='D')
+		    y-=1;
 	}
 
 	public void draw () {
-		//TODO
+        System.out.println("The dot with id: "+id+ " is at x: " +x+" and y: "+y);
 	}
 
 
